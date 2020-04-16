@@ -13,7 +13,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 lr = LogisticRegression()
 lr.fit(X_train,y_train)
 
-#plottign precision-recall Curve with Thresholds
+#plotting precision-recall Curve with Thresholds
 plt.plot(precision_recall_curve(y_test,lr.predict_proba(X_test)[:,1])[0], label ='Precision')
 plt.plot(precision_recall_curve(y_test,lr.predict_proba(X_test)[:,1])[1], label = 'Recall')
 plt.plot(precision_recall_curve(y_test,lr.predict_proba(X_test)[:,1])[2], label = 'Thresholds')
